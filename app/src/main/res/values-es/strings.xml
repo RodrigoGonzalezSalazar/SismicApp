@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Menuinfo">Información de Sismos</string>
+    <string name="Menuprev">Información de Prevención</string>
+    <string name="Menuplan">Mi Plan</string>
+    <string name="Menudesafios">Desafíos</string>
+
+    <string name="app_name">SismicApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="radio_button">Radio Button</string>
+    <string name="str_next">Next</string>
+    <string name="title_activity_result">Results!!!</string>
+    <string name="pepito">Prueba de lenguaje</string>
+    <string name="titulo_richter">Escala Richter</string>
+    <string name="titulo_infosismos">Informacion sobre sismos</string>
+    <string name="titulo_mercali">Escala Mercalli</string>
+    <string name="info_Richter">La escala de Richter fue creada en 1935 por Charles Richter, sismólogo nacido en 1900.  Richter quería desarrollar una manera cuantitativa de comparar terremotos, que no dependiera de la localización del observador."\n""\n"
+        A diferencia de la escala de Mercalli, la de Richter mide la fuerza de los terremotos de acuerdo a su magnitud, es decir, la cantidad de energía liberada durante el sismo. Esta medición se realiza utilizando los datos que entregan los sismógrafos, aparatos encargados de registra las ondas sísmicas. Por lo mismo, no tiene un límite de grados. "\n""\n"
+        Hasta el momento, la mayor magnitud registrada en el mundo corresponde a 9,5 grados, para el terremoto que ocurrió en Valdivia, Chile, en 1960. Esta es una escala que utiliza datos científicos y no percepciones de la gente. Podemos determinar algunos posibles efectos esperados, de acuerdo a la magnitud registrada."\n""\n"
+        En la siguiente tabla se muestra la escala de una manera generalizada, por un lado se observan la medición en grados y por el otro su efecto en la Tierra "\n"</string>
+    <string name="info_mercalli">Es una escala de 12 puntos, identificados cada uno de ellos por números romanos, desarrollada para evaluar la intensidad de los terremotos a través  de los efectos y daños causados a distintas estructuras."\n""\n"
+        Es una escala subjetiva, porque evalúa la percepción humana del sismo. Sirve para recolectar información en zonas donde no existen aparatos detectores, o instrumentos de medición. Se basa, como se mencionó anteriormente, en lo que sintieron las personas que vivieron el sismo, o en los daños ocasionados. Cuando se utiliza esta escala, se habla de grados de intensidad."\n""\n"
+        A continuación tenemos una tabla en la cual podemos observar los 12 puntos de esta escala y sus respectivas evaluaciones. Además se evidencia un indicador extra, la aceleración máxima del suelo, un concepto del cual nos interiorizaremos más adelante."\n""\n"</string>
+    <string name="info_infosismos_info">Los sismos o síesmos son perturbaciones súbitas en el interior de la tierra que dan origen a vibraciones en suelo; la causa principal y responsable de la mayoría de los sismos es la ruptura y fracturamiento de las rocas en las capas más exteriores de la tierra, dando origen una serie de ondas sísmicas que se propagan en el interior de la tierra y que al llegar a la superficie son percibidas como un temblor. "\n""\n"
+        Existen zonas que tienen una mayor tendencia a sufrir sismos. Se trata de aquellas regiones donde la concentración de fuerzas generada por  los límites de las placas tectónicas hace que los movimientos de reajuste sean más frecuentes, tanto en el interior de la corteza terrestre como en la superficie de la Tierra. "\n""\n"
+        El sitio donde se inicia la ruptura se llama foco (hipocentro) y el lugar en la superficie que se encuentra directamente encima en la superficie terrestre, se le denomina epicentro."\n""\n"
+        El fenómeno sísmico es similar al hecho de lanzar un objeto a un estanque de agua. En ese caso la energía liberada por el choque del objeto con la superficie de agua se manifiesta a través de una serie de ondas que se alejan de forma concéntrica al lugar donde cayó el objeto. "\n" "\n"
+        Existen zonas que tienen una mayor tendencia a sufrir sismos. Se trata de aquellas regiones  donde la concentración de fuerzas generada por  los límites de las placas tectónicas hace que los movimientos de reajuste sean más frecuentes,  tanto en el interior de la corteza terrestre como en la superficie de la Tierra.</string>
+    <string name="titulo_bienvenidasismos">Bienvenido a Información sobre Sismos</string>
+
+    <string name="titulo_bienvenidaprev">Bienvenido a Información sobre Prevención</string>
+    <string name="titulo_quehacersismo">¿Qué hacer en caso de sismos?</string>
+    <string name ="info_quehacersismo">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te encuentres. Una vez que el sismo termine debes dirigirte a las vías de evacuación y recuerda no usar elevadores. Además estar preparado y tomar precauciones en tu vivienda, planificando lo siguiente:"\n""\n"
+-Acordar un lugar seguro donde guarecerse y un lugar de encuentro en el caso de dispersión de tu grupo familiar durante el sismo."\n"
+-Revisar que las instalaciones de tu vivienda tanto eléctricas como de gas, estén en buenas condiciones."\n"
+-Preparar un kit de emergencia con elementos básicos."\n"
+-Identificar objetos de riesgo tales como cuadros, objetos que puedan desplazarse o romperse y ventanas, manteniéndose alejados de ellos durante el sismo."\n"
+</string>
+    <string name="titulo_lugarseguro">Lugar seguro</string>
+    <string name="info_lugarseguro">Si durante un sismo estas en un interior las zonas de seguridad corresponden a las partes más resistentes de una buena construcción, las que suelen ser las esquinas, rincones, pilares y el área que queda bajo el marco de una puerta."\n""\n"
+    Si te encuentras en el exterior, encontrarás un lugar seguro alejándote de panderetas, edificios, cornisas, ductos de chimeneas, árboles, postes, cables eléctricos o cualquier otro peligro latente. "\n" "\n"</string>
+    <string name="titulo_lugardeencuentro">Acordar un lugar de encuentro</string>
+    <string name="info_lugardeencuentro">Es muy importante que definas con anticipación un lugar de encuentro con tu grupo familiar en caso de un sismo, pues las comunicaciones pueden interrumpirse. Este lugar debe ser accesible para todos y seguro. "\n" "\n"</string>
+    <string name="titul_kit">Kit de emergencia</string>
+    <string name="info_kit">Consiste en los elementos básicos que debes tener ante un sismo: "\n""\n"
+-	Linterna a pilas"\n"
+-	Radio a pilas."\n"
+-	Pilas de repuesto."\n"
+-	Botiquín, que cuente al menos con desinfectante, algodón, gasa, cinta adhesiva, parches curita, aspirinas."\n"
+-	Comida energética y/o en lata para unos 5 días."\n"
+-	Agua embotellada. "\n"
+-	Ropa de abrigo."\n"
+-	Bolsas plásticas para guardar tu basura."\n"
+-	Papel higiénico y/o pañuelos desechables."\n"
+</string>
+</resources>
