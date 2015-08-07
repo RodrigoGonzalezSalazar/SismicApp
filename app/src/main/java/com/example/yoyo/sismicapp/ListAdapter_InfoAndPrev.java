@@ -4,19 +4,12 @@ package com.example.yoyo.sismicapp;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.BaseExpandableListAdapter;
-import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.List;
 
@@ -40,7 +33,7 @@ public class ListAdapter_InfoAndPrev extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.listinfoandprev_row, null);
+            convertView = inflater.inflate(R.layout.listrow_infoandprev, null);
         }
         TextView text = (TextView) convertView.findViewById(R.id.textView6);
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);

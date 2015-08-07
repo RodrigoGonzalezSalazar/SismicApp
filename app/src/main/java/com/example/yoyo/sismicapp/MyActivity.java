@@ -1,5 +1,7 @@
 package com.example.yoyo.sismicapp;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,13 +12,21 @@ public class MyActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor edit = settings.edit();
+        //edit.clear().commit();
+        String aux = settings.getString("aux", "");
+        if (!aux.equals("ok")){
+            edit.putString ("familia", "Rodrigo (Yo),hijo" );
+            edit.putString ("aux", "ok" );
+            edit.apply();}
 
 
         ImageButton btnmiplan = (ImageButton) findViewById(R.id.button_miplan);
         btnmiplan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Fragment_miplan_activity.class);
+                Intent i = new Intent(getApplicationContext(), Activity_miplan.class);
                 startActivity(i);
 
             }
@@ -27,7 +37,7 @@ public class MyActivity extends ActionBarActivity {
         btninfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent p = new Intent(getApplicationContext(), Fragment_infosismos_activity.class);
+                Intent p = new Intent(getApplicationContext(), Activity_infosismos.class);
                 startActivity(p);
 
             }
@@ -47,7 +57,7 @@ public class MyActivity extends ActionBarActivity {
         btnprev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent q = new Intent(getApplicationContext(), Fragment_infoprevencion_activity.class);
+                Intent q = new Intent(getApplicationContext(), Activity_infoprevencion.class);
                 startActivity(q);
 
             }

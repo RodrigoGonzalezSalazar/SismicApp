@@ -17,21 +17,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Fragment_miplan_activity"
+            android:name=".Activity_miplan"
             android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />
         </activity>
         <activity
-            android:name=".Fragment_infosismos_activity"
+            android:name=".Activity_infosismos"
             android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />
         </activity>
         <activity
-            android:name=".Fragment_infoprevencion_activity"
+            android:name=".Activity_infoprevencion"
             android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -72,6 +72,13 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SuperQuizActivity"/>
+        </activity>
+        <activity
+            android:name=".Activity_miplan_family_create"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyActivity"/>
         </activity>
     </application>
 

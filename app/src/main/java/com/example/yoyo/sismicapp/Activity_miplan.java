@@ -10,7 +10,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 
 
-public class Fragment_miplan_activity extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
+public class Activity_miplan extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
 
     private ViewPager mViewPager;
 
@@ -42,6 +42,9 @@ public class Fragment_miplan_activity extends ActionBarActivity implements Actio
 
         tab = actionBar.newTab().setText("Asignar tareas").setTabListener(this);
         actionBar.addTab(tab);
+
+        tab = actionBar.newTab().setText("Grupo Familiar").setTabListener(this);
+        actionBar.addTab(tab);
     }
     public class PagerAdapter extends FragmentPagerAdapter {
 
@@ -59,13 +62,15 @@ public class Fragment_miplan_activity extends ActionBarActivity implements Actio
                     return new Fragment_miplan_Lugarencuentro();
                 case 3:
                     return new Fragment_miplan_Asignartareas();
+                case 4:
+                    return new Fragment_miplan_family_tab();
                 default:
                     return null;
             }
         }
 
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 

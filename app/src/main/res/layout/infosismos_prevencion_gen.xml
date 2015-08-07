@@ -5,9 +5,17 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/but"
+        android:layout_gravity="right" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:clickable="true" />
 </LinearLayout>

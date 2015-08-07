@@ -11,7 +11,7 @@ public class Fragment_infoprevencion_comoactuar extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.infoprevencion_comoactuar, container, false);
+        rootView = inflater.inflate(R.layout.family_tab, container, false);
         return rootView;
     }
 }

@@ -1,27 +1,30 @@
 package com.example.yoyo.sismicapp;
 
 
-import android.os.Bundle;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.util.Log;
 
 
-public class Fragment_infoprevencion_activity extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
+public class Activity_infosismos extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
 
     private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pager_infosismos_ingles);
+        setContentView(R.layout.pager_infosismos);
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.pager_infosismos_ingles);
+        mViewPager = (ViewPager) findViewById(R.id.pager_infosismos);
         mViewPager.setAdapter(adapter);
 
         mViewPager.setOnPageChangeListener(this);
@@ -29,19 +32,16 @@ public class Fragment_infoprevencion_activity extends ActionBarActivity implemen
         /********************MODO TABS EN ACTIONBAR**************************/
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.setTitle("Información sobre Prevención");
+        actionBar.setTitle("Info Sismo");
 
         /**************************CREAR TABS******************************/
-        ActionBar.Tab tab = actionBar.newTab().setText("Home").setTabListener(this);
+        ActionBar.Tab tab = actionBar.newTab().setText("Info Sismos").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Como actuar en un sismo").setTabListener(this);
+        tab = actionBar.newTab().setText("Escala de Mercalli").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Lugares seguros").setTabListener(this);
-        actionBar.addTab(tab);
-
-        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
+        tab = actionBar.newTab().setText("Escala de Richter").setTabListener(this);
         actionBar.addTab(tab);
 
 
@@ -55,22 +55,21 @@ public class Fragment_infoprevencion_activity extends ActionBarActivity implemen
         public Fragment getItem(int arg0) {
             switch (arg0) {
                 case 0:
-                    return new Fragment_infoprevencion_home();
+                    //info sismos
+                    return new Fragment_gen();
                 case 1:
-                    return new Fragment_infoprevencion_comoactuar();
+                    //escala mercali
+                    return new Fragment_gen();
                 case 2:
-                    return new Fragment_infoprevencion_lugar();
-                case 3:
-                    return new Fragment_infoprevencion_kit();
+                    //escala richter
+                    return new Fragment_gen();
                 default:
                     return null;
             }
         }
-
         public int getCount() {
-            return 4;
+            return 3;
         }
-
 
     }
 
@@ -102,6 +101,5 @@ public class Fragment_infoprevencion_activity extends ActionBarActivity implemen
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
-
 
 }
