@@ -1,8 +1,6 @@
 package com.example.yoyo.sismicapp;
 
 
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 
 public class Activity_infosismos extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
@@ -56,13 +53,13 @@ public class Activity_infosismos extends ActionBarActivity implements ActionBar.
             switch (arg0) {
                 case 0:
                     //info sismos
-                    return new Fragment_gen();
+                    return new Fragment_info_gen();
                 case 1:
                     //escala mercali
-                    return new Fragment_gen();
+                    return new Fragment_info_gen();
                 case 2:
                     //escala richter
-                    return new Fragment_gen();
+                    return new Fragment_info_gen();
                 default:
                     return null;
             }

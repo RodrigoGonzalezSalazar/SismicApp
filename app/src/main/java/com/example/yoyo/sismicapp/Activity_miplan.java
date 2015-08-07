@@ -34,13 +34,10 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
         ActionBar.Tab tab = actionBar.newTab().setText("Home").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Preparar mi Kit de emergencia").setTabListener(this);
+        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Agregar Lugar de encuentro").setTabListener(this);
-        actionBar.addTab(tab);
-
-        tab = actionBar.newTab().setText("Asignar tareas").setTabListener(this);
+        tab = actionBar.newTab().setText("Prepara tu plan").setTabListener(this);
         actionBar.addTab(tab);
 
         tab = actionBar.newTab().setText("Grupo Familiar").setTabListener(this);
@@ -61,8 +58,6 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
                 case 2:
                     return new Fragment_miplan_Lugarencuentro();
                 case 3:
-                    return new Fragment_miplan_Asignartareas();
-                case 4:
                     return new Fragment_miplan_family_tab();
                 default:
                     return null;
@@ -70,7 +65,7 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
         }
 
         public int getCount() {
-            return 5;
+            return 4;
         }
     }
 

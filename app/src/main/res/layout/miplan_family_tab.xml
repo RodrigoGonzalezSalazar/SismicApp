@@ -16,7 +16,7 @@
     <Button
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Agregar"
+        android:text="Agregar familiar"
         android:id="@+id/but"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

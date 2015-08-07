@@ -1,20 +1,13 @@
 package com.example.yoyo.sismicapp;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,7 +25,7 @@ public class Activity_miplan_family_create extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.family_create);
+        setContentView(R.layout.miplan_family_create);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         familia = settings.getString("familia", "");
@@ -93,12 +86,12 @@ public class Activity_miplan_family_create extends ActionBarActivity {
                     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences.Editor edit = settings.edit();
                     String nombre = editText.getText().toString();
-                    edit.putString("familia", familia+"," + nombre+"," + tipo);
+                    edit.putString("familia", familia+";" + nombre+";" + tipo);
                     edit.apply();
                     runOnUiThread(new Runnable() {
                         public void run() {
-                    Toast.makeText(getApplicationContext(), "Se añadió el integrante a la familia",
-                            Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Se añadió el integrante a la familia",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     });
                     Intent i = new Intent(getApplicationContext(), Activity_miplan.class);

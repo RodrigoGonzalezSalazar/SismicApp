@@ -17,7 +17,7 @@ public class MyActivity extends ActionBarActivity {
         //edit.clear().commit();
         String aux = settings.getString("aux", "");
         if (!aux.equals("ok")){
-            edit.putString ("familia", "Rodrigo (Yo),hijo" );
+            edit.putString ("familia", "Rodrigo;Yo, hijo" );
             edit.putString ("aux", "ok" );
             edit.apply();}
 

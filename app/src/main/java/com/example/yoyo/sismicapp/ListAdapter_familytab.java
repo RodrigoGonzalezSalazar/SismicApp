@@ -34,9 +34,9 @@ public class ListAdapter_familytab extends BaseAdapter {
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);
         if (type.get(position).equals("papa")){icon.setBackgroundResource(R.drawable.papa);}
         else if (type.get(position).equals("mama")) {icon.setBackgroundResource(R.drawable.mama);}
-        else if (type.get(position).equals("hijo")){icon.setBackgroundResource(R.drawable.hijo);}
+        else if (type.get(position).equals("hijo")||type.get(position).equals("Yo, hijo")){icon.setBackgroundResource(R.drawable.hijo);}
         else if (type.get(position).equals("hija")){icon.setBackgroundResource(R.drawable.hija);}
-        text.setText(list.get(position));
+        text.setText(list.get(position)+" ("+type.get(position)+")");
 
         return convertView;
     }

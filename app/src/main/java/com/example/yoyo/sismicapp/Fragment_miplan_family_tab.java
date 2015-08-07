@@ -27,11 +27,11 @@ public class Fragment_miplan_family_tab extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.family_tab, container, false);
+        rootView = inflater.inflate(R.layout.miplan_family_tab, container, false);
         ListView lv = (ListView) rootView.findViewById(R.id.listView);
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String familia = settings.getString("familia", "");
-        List<String> items = new ArrayList<String>(Arrays.asList(familia.split(",")));
+        List<String> items = new ArrayList<String>(Arrays.asList(familia.split(";")));
         Log.i("el log", String.valueOf(items.get(0)));
         for (int i = 0; i < items.size(); i++) {
             list.add(items.get(i));

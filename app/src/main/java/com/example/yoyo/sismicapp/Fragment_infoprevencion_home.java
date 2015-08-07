@@ -12,7 +12,7 @@ public class Fragment_infoprevencion_home extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.family_create, container, false);
+        rootView = inflater.inflate(R.layout.miplan_family_create, container, false);
         return rootView;
     }
 }
