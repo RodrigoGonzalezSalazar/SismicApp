@@ -1,6 +1,7 @@
 package com.example.yoyo.sismicapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 
 
 public class Activity_infoprevencion extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
@@ -55,13 +58,13 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
         public Fragment getItem(int arg0) {
             switch (arg0) {
                 case 0:
-                    return new Fragment_infoprevencion_home();
+                    return new Fragment_prev_gen();
                 case 1:
-                    return new Fragment_infoprevencion_comoactuar();
+                    return new Fragment_prev_gen();
                 case 2:
-                    return new Fragment_infoprevencion_lugar();
+                    return new Fragment_prev_gen();
                 case 3:
-                    return new Fragment_infoprevencion_kit();
+                    return new Fragment_prev_gen();
                 default:
                     return null;
             }
@@ -102,6 +105,31 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            event.startTracking();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.isTracking()
+                && !event.isCanceled()) {
+            finish();
+            return true;
+        }
+        return super.onKeyUp(keyCode, event);
+    }
 
 }

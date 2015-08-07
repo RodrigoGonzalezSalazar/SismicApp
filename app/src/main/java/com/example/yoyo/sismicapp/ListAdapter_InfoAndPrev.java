@@ -37,7 +37,7 @@ public class ListAdapter_InfoAndPrev extends BaseAdapter {
         }
         TextView text = (TextView) convertView.findViewById(R.id.textView6);
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);
-        text.setText(completes.get(position));
+        text.setText(summaries.get(position));
         if (position==0){icon.setBackgroundResource(R.drawable.information);;}
         else if (position==1){
             if (type.equals("info")){icon.setBackgroundResource(R.drawable.summary);}
