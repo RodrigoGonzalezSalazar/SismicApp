@@ -1,6 +1,4 @@
-package com.example.yoyo.sismicapp;
-
-
+package com.example.yoyo.sismicapp.ListAdapters;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -8,8 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.yoyo.sismicapp.R;
 
 import java.util.List;
 
@@ -32,11 +33,15 @@ public class ListAdapter_familytab extends BaseAdapter {
         }
         TextView text = (TextView) convertView.findViewById(R.id.textView6);
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);
-        if (type.get(position).equals("papa")){icon.setBackgroundResource(R.drawable.papa);}
-        else if (type.get(position).equals("mama")) {icon.setBackgroundResource(R.drawable.mama);}
-        else if (type.get(position).equals("hijo")||type.get(position).equals("Yo, hijo")){icon.setBackgroundResource(R.drawable.hijo);}
-        else if (type.get(position).equals("hija")){icon.setBackgroundResource(R.drawable.hija);}
-        text.setText(list.get(position)+" ("+type.get(position)+")");
+        ImageButton delete = (ImageButton) convertView.findViewById(R.id.delete);
+        if (type.get(position).equals("papa")){icon.setBackgroundResource(R.drawable.new_papa);}
+        else if (type.get(position).equals("mama")) {icon.setBackgroundResource(R.drawable.new_mama);}
+        else if (type.get(position).equals("hijo")){icon.setBackgroundResource(R.drawable.new_hijo);}
+        else if (type.get(position).equals("hija")){icon.setBackgroundResource(R.drawable.new_hija);}
+        text.setText(list.get(position));
+        if (position==0){ delete.setVisibility(View.GONE);
+            delete.setClickable(false);
+            }
 
         return convertView;
     }

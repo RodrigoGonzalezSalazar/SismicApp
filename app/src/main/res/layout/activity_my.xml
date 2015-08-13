@@ -3,142 +3,141 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:padding="7dp">
+
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/logo_vf"
+        android:adjustViewBounds="false"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp" />
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:weightSum="1">
-
-        <ImageView
-            android:layout_width="260dp"
-            android:layout_height="70dp"
-            android:id="@+id/imageView"
-            android:background="@drawable/logo_vf"
-            android:adjustViewBounds="false"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top"
+        android:layout_weight="1">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1">
+            android:layout_marginRight="10dp">
 
             <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:text="info sismos"
                 android:id="@+id/button_infosismos"
-                android:layout_gravity="left"
-                android:background="@drawable/info"
-                android:layout_marginRight="10dp" />
-
-            <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:id="@+id/button_prevencion"
-                android:background="@drawable/prev"
-                android:layout_gravity="right"
-                android:layout_marginLeft="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="1">
+                android:layout_gravity="top"
+                android:background="@drawable/info" />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Menuinfo"
                 android:id="@+id/zdxfghjk"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:textIsSelectable="false"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:layout_marginRight="10dp" />
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:id="@+id/button_prevencion"
+                android:background="@drawable/prev"
+                android:layout_gravity="top" />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Menuprev"
                 android:id="@+id/textView"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:textIsSelectable="false"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="right" />
+                android:gravity="center_horizontal" />
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1">
+            android:layout_marginRight="10dp">
 
             <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:text="Miplan"
                 android:id="@+id/button_miplan"
-                android:layout_gravity="left"
                 android:background="@drawable/miplan"
-                android:layout_marginRight="10dp" />
-
-            <ImageButton
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:text="Quiz"
-                android:id="@+id/button_quiz"
-                android:layout_gravity="right"
-                android:background="@drawable/logros"
-                android:layout_marginLeft="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="1">
+                android:layout_gravity="top" />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Menuplan"
                 android:id="@+id/textView4"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:textIsSelectable="false"
-                android:layout_gravity="right"
-                android:gravity="center"
-                android:layout_marginRight="10dp" />
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:text="Quiz"
+                android:id="@+id/button_quiz"
+                android:background="@drawable/logros"
+                android:layout_gravity="top" />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Menudesafios"
                 android:id="@+id/textView3"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:textIsSelectable="false"
-                android:layout_gravity="right"
-                android:gravity="center"
-                android:layout_marginLeft="10dp" />
+                android:gravity="center_horizontal" />
+
         </LinearLayout>
 
     </LinearLayout>
+
 
 
 </LinearLayout>

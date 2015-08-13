@@ -38,40 +38,40 @@ public class Activity_miplan_family_create extends ActionBarActivity {
         mama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mama.setBackgroundResource(R.drawable.mama_pressed);
-                papa.setBackgroundResource(R.drawable.papa);
-                hijo.setBackgroundResource(R.drawable.hijo);
-                hija.setBackgroundResource(R.drawable.hija);
+                mama.setBackgroundResource(R.drawable.new_mama);
+                papa.setBackgroundResource(R.drawable.new_papa_unpressed);
+                hijo.setBackgroundResource(R.drawable.new_hijo_unpressed);
+                hija.setBackgroundResource(R.drawable.new_hija_unpressed);
                 tipo="mama";
             }
             });
         papa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mama.setBackgroundResource(R.drawable.mama);
-                papa.setBackgroundResource(R.drawable.papa_pressed);
-                hijo.setBackgroundResource(R.drawable.hijo);
-                hija.setBackgroundResource(R.drawable.hija);
+                mama.setBackgroundResource(R.drawable.new_mama_unpressed);
+                papa.setBackgroundResource(R.drawable.new_papa);
+                hijo.setBackgroundResource(R.drawable.new_hijo_unpressed);
+                hija.setBackgroundResource(R.drawable.new_hija_unpressed);
                 tipo="papa";
             }
         });
         hijo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mama.setBackgroundResource(R.drawable.mama);
-                papa.setBackgroundResource(R.drawable.papa);
-                hijo.setBackgroundResource(R.drawable.hijo_pressed);
-                hija.setBackgroundResource(R.drawable.hija);
+                mama.setBackgroundResource(R.drawable.new_mama_unpressed);
+                papa.setBackgroundResource(R.drawable.new_papa_unpressed);
+                hijo.setBackgroundResource(R.drawable.new_hijo);
+                hija.setBackgroundResource(R.drawable.new_hija_unpressed);
                 tipo = "hijo";
             }
         });
         hija.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mama.setBackgroundResource(R.drawable.mama);
-                papa.setBackgroundResource(R.drawable.papa);
-                hijo.setBackgroundResource(R.drawable.hijo);
-                hija.setBackgroundResource(R.drawable.hija_pressed);
+                mama.setBackgroundResource(R.drawable.new_mama_unpressed);
+                papa.setBackgroundResource(R.drawable.new_papa_unpressed);
+                hijo.setBackgroundResource(R.drawable.new_hijo_unpressed);
+                hija.setBackgroundResource(R.drawable.new_hija);
                 tipo="hija";
             }
         });

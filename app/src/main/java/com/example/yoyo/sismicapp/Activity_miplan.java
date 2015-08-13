@@ -19,10 +19,10 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pager_miplan);
+        setContentView(R.layout.pager);
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.pager_miplan);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(adapter);
 
         mViewPager.setOnPageChangeListener(this);
@@ -36,13 +36,14 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
         ActionBar.Tab tab = actionBar.newTab().setText("Home").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
+        tab = actionBar.newTab().setText("Grupo Familiar").setTabListener(this);
         actionBar.addTab(tab);
 
         tab = actionBar.newTab().setText("Prepara tu plan").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Grupo Familiar").setTabListener(this);
+
+        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
         actionBar.addTab(tab);
     }
     public class PagerAdapter extends FragmentPagerAdapter {
@@ -56,11 +57,11 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
                 case 0:
                     return new Fragment_miplan_home();
                 case 1:
-                    return new Fragment_miplan_Prepararmikit();
-                case 2:
-                    return new Fragment_miplan_Lugarencuentro();
-                case 3:
                     return new Fragment_miplan_family_tab();
+                case 2:
+                    return new Fragment_miplan_plan();
+                case 3:
+                    return new Fragment_miplan_Prepararmikit();
                 default:
                     return null;
             }

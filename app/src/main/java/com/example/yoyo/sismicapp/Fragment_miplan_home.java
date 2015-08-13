@@ -22,13 +22,29 @@ import java.util.List;
 
 public class Fragment_miplan_home extends Fragment {
     View rootView;
-
+    ImageView deboJuntarme;
+    TextView titlejuntarme;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.miplan_home, container, false);
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
+        String lugardeencuentro = settings.getString("lugarDeEncuentro", "");
+        deboJuntarme = (ImageView) rootView.findViewById(R.id.debojuntarme);
+        titlejuntarme = (TextView) rootView.findViewById(R.id.textView2);
+        if (lugardeencuentro.equals("casa")){deboJuntarme.setBackgroundResource(R.drawable.casa);
+            titlejuntarme.setText("Casa");
+        }
+        else if (lugardeencuentro.equals("oficina")){deboJuntarme.setBackgroundResource(R.drawable.oficina);
+            titlejuntarme.setText("Oficina");
+        }
+        else if (lugardeencuentro.equals("parque")){deboJuntarme.setBackgroundResource(R.drawable.parque);
+            titlejuntarme.setText("Parque");}
+        else if (lugardeencuentro.equals("colegio")){deboJuntarme.setBackgroundResource(R.drawable.colegio);
+            titlejuntarme.setText("Colegio");}
+        else {deboJuntarme.setVisibility(View.INVISIBLE);
+            titlejuntarme.setText("No se ha establecido lugar de encuentro");
+        }
         List<String> total = Arrays.asList(settings.getString("auxLinterna", ""), settings.getString("auxBolsas", ""),
                 settings.getString("auxSnack", ""),settings.getString("auxEmbotellada", ""), settings.getString("auxRopa", ""),
                 settings.getString("auxAseo", ""), settings.getString("auxPilas", ""), settings.getString("auxAux", ""),
@@ -38,9 +54,8 @@ public class Fragment_miplan_home extends Fragment {
             if (str.equals("v")){auxtotal=auxtotal+1;}
         }
         final ImageView deboHacer = (ImageView) rootView.findViewById(R.id.debohacer);
-        final ImageView deboJuntarme = (ImageView) rootView.findViewById(R.id.debojuntarme);
+
         final TextView falta = (TextView) rootView.findViewById(R.id.falta);
-        String lugardeencuentro = settings.getString("lugarDeEncuentro", "");
 
         String checkagua = settings.getString("checkAgua", "");
         String checkluz = settings.getString("checkLuz", "");

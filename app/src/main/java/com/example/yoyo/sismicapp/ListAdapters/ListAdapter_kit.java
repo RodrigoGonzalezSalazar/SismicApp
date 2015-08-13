@@ -1,4 +1,4 @@
-package com.example.yoyo.sismicapp;
+package com.example.yoyo.sismicapp.ListAdapters;
 
 
 
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.yoyo.sismicapp.R;
 
 import java.util.List;
 
@@ -36,67 +38,67 @@ public class ListAdapter_kit extends BaseAdapter {
         TextView title = (TextView) convertView.findViewById(R.id.textView8);
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);
         if (items.get(position).equals("Linterna")) {
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_linterna_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_linterna);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_linterna);
+            else {icon.setBackgroundResource(R.drawable.kit_linterna_r);
             }
         }
         else if (items.get(position).equals("Bolsas de basura")) {
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_bolsas_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_bolsas);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_bolsas);
+            else {icon.setBackgroundResource(R.drawable.kit_bolsas_r);
             }
         }
         else if (items.get(position).equals("Comida tipo Snack")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_snack_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_snack);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_snack);
+            else {icon.setBackgroundResource(R.drawable.kit_snack_r);
             }
         }
         else if (items.get(position).equals("Agua embotellada")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_embotellada_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_embotellada);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_embotellada);
+            else {icon.setBackgroundResource(R.drawable.kit_embotellada_r);
             }
         }
         else if (items.get(position).equals("Ropa")) {
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_ropa_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_ropa);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_ropa);
+            else {icon.setBackgroundResource(R.drawable.kit_ropa_r);
             }
         }
         else if (items.get(position).equals("Artículos de aseo")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_aseo_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_aseo);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_aseo);
+            else {icon.setBackgroundResource(R.drawable.kit_aseo_r);
             }
         }
         else if (items.get(position).equals("Pilas")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_pilas_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_pilas);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_pilas);
+            else {icon.setBackgroundResource(R.drawable.kit_pilas_r);
             }
         }
         else if (items.get(position).equals("Botiquín de primeros auxilios")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_primerosaux_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_primerosaux);
             }
-            else {icon.setBackgroundResource(R.drawable.kit_primerosaux);
+            else {icon.setBackgroundResource(R.drawable.kit_primerosaux_r);
             }
         }
         else if (items.get(position).equals("Radio portatíl")){
-            if (vr.get(position).equals("r")) {
-                icon.setBackgroundResource(R.drawable.kit_radio_r);
+            if (vr.get(position).equals("v")) {
+                icon.setBackgroundResource(R.drawable.kit_radio);
             }
             else {
-                icon.setBackgroundResource(R.drawable.kit_radio);
+                icon.setBackgroundResource(R.drawable.kit_radio_r);
             }
         }
         title.setText(items.get(position));

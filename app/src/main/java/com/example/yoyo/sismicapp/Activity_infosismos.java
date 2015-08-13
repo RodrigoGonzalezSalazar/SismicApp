@@ -1,6 +1,8 @@
 package com.example.yoyo.sismicapp;
 
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
@@ -9,8 +11,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+
+import com.example.yoyo.sismicapp.Fragments_Infosismos.EscMercalli;
+import com.example.yoyo.sismicapp.Fragments_Infosismos.EscRitcher;
+import com.example.yoyo.sismicapp.Fragments_Infosismos.Infosismos;
 
 
 public class Activity_infosismos extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
@@ -20,10 +27,10 @@ public class Activity_infosismos extends ActionBarActivity implements ActionBar.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pager_infosismos);
+        setContentView(R.layout.pager);
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.pager_infosismos);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(adapter);
 
         mViewPager.setOnPageChangeListener(this);
@@ -55,13 +62,13 @@ public class Activity_infosismos extends ActionBarActivity implements ActionBar.
             switch (arg0) {
                 case 0:
                     //info sismos
-                    return new Fragment_info_gen();
+                    return new Infosismos();
                 case 1:
                     //escala mercali
-                    return new Fragment_info_gen();
+                    return new EscMercalli();
                 case 2:
                     //escala richter
-                    return new Fragment_info_gen();
+                    return new EscRitcher();
                 default:
                     return null;
             }

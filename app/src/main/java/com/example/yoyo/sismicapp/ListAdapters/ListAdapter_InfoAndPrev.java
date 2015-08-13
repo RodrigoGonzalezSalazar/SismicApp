@@ -1,4 +1,4 @@
-package com.example.yoyo.sismicapp;
+package com.example.yoyo.sismicapp.ListAdapters;
 
 
 
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.yoyo.sismicapp.R;
 
 import java.util.List;
 

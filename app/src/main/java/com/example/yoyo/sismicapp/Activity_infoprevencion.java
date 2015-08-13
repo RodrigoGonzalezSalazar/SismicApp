@@ -1,7 +1,6 @@
 package com.example.yoyo.sismicapp;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +12,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
+import com.example.yoyo.sismicapp.Fragments_Prevencion.ComoActuar;
+import com.example.yoyo.sismicapp.Fragments_Prevencion.KitEmergencia;
+import com.example.yoyo.sismicapp.Fragments_Prevencion.LugaresSeguros;
+
 
 public class Activity_infoprevencion extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener  {
 
@@ -21,10 +24,10 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pager_infosismos_ingles);
+        setContentView(R.layout.pager);
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.pager_infosismos_ingles);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(adapter);
 
         mViewPager.setOnPageChangeListener(this);
@@ -35,10 +38,7 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
         actionBar.setTitle("Información sobre Prevención");
 
         /**************************CREAR TABS******************************/
-        ActionBar.Tab tab = actionBar.newTab().setText("Home").setTabListener(this);
-        actionBar.addTab(tab);
-
-        tab = actionBar.newTab().setText("Como actuar en un sismo").setTabListener(this);
+        ActionBar.Tab tab = actionBar.newTab().setText("Como actuar en un sismo").setTabListener(this);
         actionBar.addTab(tab);
 
         tab = actionBar.newTab().setText("Lugares seguros").setTabListener(this);
@@ -58,20 +58,18 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
         public Fragment getItem(int arg0) {
             switch (arg0) {
                 case 0:
-                    return new Fragment_prev_gen();
+                    return new ComoActuar();
                 case 1:
-                    return new Fragment_prev_gen();
+                    return new LugaresSeguros();
                 case 2:
-                    return new Fragment_prev_gen();
-                case 3:
-                    return new Fragment_prev_gen();
+                    return new KitEmergencia();
                 default:
                     return null;
             }
         }
 
         public int getCount() {
-            return 4;
+            return 3;
         }
 
 

@@ -15,10 +15,10 @@ public class MyActivity extends ActionBarActivity {
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor edit = settings.edit();
         //edit.clear().commit();
-        String aux = settings.getString("aux", "");
+        String aux = settings.getString("NombreUsuario", "");
         if (!aux.equals("ok")){
-            edit.putString ("familia", "Rodrigo;Yo, hijo" );
-            edit.putString ("aux", "ok" );
+            edit.putString ("familia", "Rodrigo (Yo);hijo" );
+            edit.putString ("NombreUsuario", "ok" );
             edit.apply();}
 
 
