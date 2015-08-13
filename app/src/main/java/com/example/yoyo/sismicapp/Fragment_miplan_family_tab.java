@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.support.v4.app.Fragment;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.yoyo.sismicapp.ListAdapters.ListAdapter_familytab;
@@ -45,6 +47,19 @@ public class Fragment_miplan_family_tab extends Fragment {
         }
         ListAdapter_familytab adapter = new ListAdapter_familytab(getActivity(), list, type);
         lv.setAdapter(adapter);
+        ImageButton delete = (ImageButton) rootView.findViewById(R.id.delete);
+
         return rootView;
+    }
+    public View getViewByPosition(int pos, ListView listView) {
+        final int firstListItemPosition = listView.getFirstVisiblePosition();
+        final int lastListItemPosition = firstListItemPosition + listView.getChildCount() - 1;
+
+        if (pos < firstListItemPosition || pos > lastListItemPosition ) {
+            return listView.getAdapter().getView(pos, null, listView);
+        } else {
+            final int childIndex = pos - firstListItemPosition;
+            return listView.getChildAt(childIndex);
+        }
     }
 }
