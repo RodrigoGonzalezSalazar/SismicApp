@@ -48,6 +48,15 @@ public class Fragment_miplan_family_tab extends Fragment {
         ListAdapter_familytab adapter = new ListAdapter_familytab(getActivity(), list, type);
         lv.setAdapter(adapter);
         ImageButton delete = (ImageButton) rootView.findViewById(R.id.delete);
+        Button agregar = (Button) rootView.findViewById(R.id.but);
+        agregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), Activity_miplan_family_create.class);
+                startActivity(i);
+                getActivity().finish();
+            }
+        });
 
         return rootView;
     }
