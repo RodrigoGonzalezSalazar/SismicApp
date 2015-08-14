@@ -32,15 +32,15 @@ public class Fragment_miplan_home extends Fragment {
         String lugardeencuentro = settings.getString("lugarDeEncuentro", "");
         deboJuntarme = (ImageView) rootView.findViewById(R.id.debojuntarme);
         titlejuntarme = (TextView) rootView.findViewById(R.id.textView2);
-        if (lugardeencuentro.equals("casa")){deboJuntarme.setBackgroundResource(R.drawable.casa);
+        if (lugardeencuentro.equals("casa")){deboJuntarme.setBackgroundResource(R.drawable.nnew_casa);
             titlejuntarme.setText("Casa");
         }
-        else if (lugardeencuentro.equals("oficina")){deboJuntarme.setBackgroundResource(R.drawable.oficina);
+        else if (lugardeencuentro.equals("oficina")){deboJuntarme.setBackgroundResource(R.drawable.nnew_oficina);
             titlejuntarme.setText("Oficina");
         }
-        else if (lugardeencuentro.equals("parque")){deboJuntarme.setBackgroundResource(R.drawable.parque);
+        else if (lugardeencuentro.equals("parque")){deboJuntarme.setBackgroundResource(R.drawable.nnew_parque);
             titlejuntarme.setText("Parque");}
-        else if (lugardeencuentro.equals("colegio")){deboJuntarme.setBackgroundResource(R.drawable.colegio);
+        else if (lugardeencuentro.equals("colegio")){deboJuntarme.setBackgroundResource(R.drawable.nnew_colegio);
             titlejuntarme.setText("Colegio");}
         else {deboJuntarme.setVisibility(View.INVISIBLE);
             titlejuntarme.setText("No se ha establecido lugar de encuentro");

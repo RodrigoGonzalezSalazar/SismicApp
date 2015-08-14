@@ -40,12 +40,12 @@ public class ListAdapter_InfoAndPrev extends BaseAdapter {
         TextView text = (TextView) convertView.findViewById(R.id.textView6);
         ImageView icon = (ImageView) convertView.findViewById(R.id.typeicon);
         text.setText(summaries.get(position));
-        if (position==0){icon.setBackgroundResource(R.drawable.information);;}
+        if (position==0){icon.setBackgroundResource(R.drawable.nnew_information);;}
         else if (position==1){
-            if (type.equals("info")){icon.setBackgroundResource(R.drawable.summary);}
-            else if (type.equals("prev")){icon.setBackgroundResource(R.drawable.whattodo);}
+            if (type.equals("info")){icon.setBackgroundResource(R.drawable.nnew_summary);}
+            else if (type.equals("prev")){icon.setBackgroundResource(R.drawable.nnew_whattodo);}
         }
-        else if (position==2){icon.setBackgroundResource(R.drawable.fact);}
+        else if (position==2){icon.setBackgroundResource(R.drawable.nnew_fact);}
 
         return convertView;
     }

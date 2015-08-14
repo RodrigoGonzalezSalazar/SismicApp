@@ -27,9 +27,14 @@ public class Infosismos extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.infosismos_prevencion_gen, container, false);
         lv = (ListView) rootView.findViewById(R.id.listView);
-        //reconocer tab actual y hacer if tab actual: complete y summary == esto.
-        completes = Arrays.asList("Extenso Información detallada, esto es un texto de prueba para mostrar la diferencia real que podría tener el preview con el texto extenso. 1234567890 1234567890 ABC", "Extenso Resumen información detallada", "Extenso Dato Freak");
-        summary = Arrays.asList("Preview Información detallada 1", "Preview  Resumen información detallada", "Preview Dato Freak");
+        String long_info= getResources().getString(R.string.long_infosismos_info);
+        String short_info= getResources().getString(R.string.short_infosismos_info);
+        String long_summary= getResources().getString(R.string.long_infosismos_summary);
+        String short_summary= getResources().getString(R.string.short_infosismos_summary);
+        String long_dato= getResources().getString(R.string.long_infosismos_dato);
+        String short_dato= getResources().getString(R.string.short_infosismos_dato);
+        completes = Arrays.asList(long_info,long_summary,long_dato);
+        summary = Arrays.asList(short_info, short_summary,short_dato);
         ListAdapter_InfoAndPrev adapter = new ListAdapter_InfoAndPrev(getActivity(),"info",completes, summary);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){

@@ -56,7 +56,7 @@
                 android:layout_height="75dp"
                 android:id="@+id/debohacer"
                 android:gravity="center_vertical|center_horizontal"
-                android:background="@drawable/cortaragua"
+                android:background="@drawable/nnew_cortaragua"
                 android:layout_marginBottom="5dp" />
 
             <TextView

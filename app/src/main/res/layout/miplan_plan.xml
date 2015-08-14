@@ -68,7 +68,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView9"
-                android:background="@drawable/cortargas"
+                android:background="@drawable/nnew_cortargas"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView14"
-                android:background="@drawable/cortarluz"
+                android:background="@drawable/nnew_cortarluz"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -117,7 +117,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView15"
-                android:background="@drawable/cortaragua"
+                android:background="@drawable/nnew_cortaragua"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -164,7 +164,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView2"
-                android:background="@drawable/casa"
+                android:background="@drawable/nnew_casa"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -189,7 +189,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView10"
-                android:background="@drawable/oficina"
+                android:background="@drawable/nnew_oficina"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -214,7 +214,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView11"
-                android:background="@drawable/parque"
+                android:background="@drawable/nnew_parque"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -238,7 +238,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/imageView12"
-                android:background="@drawable/colegio"
+                android:background="@drawable/nnew_colegio"
                 android:layout_marginBottom="5dp" />
 
             <TextView
