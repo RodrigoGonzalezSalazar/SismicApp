@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class DbHelper1 extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     // Database Name
     private static final String DATABASE_NAME = "triviaQuiz1";
     // tasks table name
@@ -40,7 +40,7 @@ public class DbHelper1 extends SQLiteOpenHelper {
     }
     private void addQuestions()
     {
-        Question q1=new Question("¿Dónde se inicia la ruptura en un sismo?","hipocentro","epicentro","baricentro", "hipocentro");
+        Question q1=new Question("¿Dónde se inicia la ruptura en un sismo?","Hipocentro","Epicentro","Baricentro", "Hipocentro");
         this.addQuestion(q1);
         Question q2=new Question("¿Dónde ocurrio el terremoto más potente de la historia?","New York - USA","Valdivia - Chile", "Seoul - Korea","Valdivia - Chile");
         this.addQuestion(q2);
@@ -48,7 +48,7 @@ public class DbHelper1 extends SQLiteOpenHelper {
         this.addQuestion(q3);
         Question q4=new Question("¿Cuál fue la potencia en escala de Richter del terremoto del 27F?", "9.5", "8.8", "8.1", "8.8");
         this.addQuestion(q4);
-        Question q5=new Question("A qué se asemeja un fenomeno sismico","lanzar una esfera metalica y una plama a la misma altura","el movimiento de las olas oceanicas","lanzar un objeto en un estanque","lanzar un objeto en un estanque");
+        Question q5=new Question("A qué se asemeja un fenomeno sismico","Lanzar una esfera metalica y una plama a la misma altura","El movimiento de las olas oceanicas","Lanzar un objeto en un estanque","Lanzar un objeto en un estanque");
         this.addQuestion(q5);
 
     }

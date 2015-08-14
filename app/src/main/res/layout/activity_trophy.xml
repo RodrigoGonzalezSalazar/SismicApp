@@ -2,65 +2,76 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a Tus trofeos!"
-        android:id="@+id/miplan_bienvenida_text"
+        android:text="Trofeos"
+        android:id="@+id/textView21"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical|center_horizontal"
-        android:textSize="40dp"
-        android:lines="2" />
+        android:textSize="30dp"
+        android:textColor="#666666"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="No has conseguido ningun logro :("
-        android:id="@+id/nada" />
+        android:id="@+id/nada"
+        android:textColor="#666666"
+        android:gravity="center" />
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:id="@+id/copa1"
-            android:layout_marginRight="10dp" />
-
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:id="@+id/copa2"
-            android:layout_marginLeft="10dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_gravity="center">
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:id="@+id/copa1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/campeon1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:id="@+id/copa2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/campeon2"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#666666" />
+
     </LinearLayout>
 
 

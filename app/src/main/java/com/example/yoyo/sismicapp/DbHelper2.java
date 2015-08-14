@@ -13,7 +13,7 @@ import java.util.List;
  * Created by tino on 17-11-2014.
  */
 public class DbHelper2 extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     private static final String DATABASE_NAME = "triviaQuiz2";
     // tasks table name
@@ -50,7 +50,7 @@ public class DbHelper2 extends SQLiteOpenHelper {
         this.addQuestion(q3);
         Question q4=new Question("¿Por qué es bueno acordar un lugar de encuentro?", "Porque las comunicaciones pueden interrumpirse", "Para preparar a la familia", "Todas las anteriores", "Todas las anteriores");
         this.addQuestion(q4);
-        Question q5=new Question("¿Cuales son objetos de riesgo?","ventanas","bajo la mesa","las esquinas de tu casa","ventanas");
+        Question q5=new Question("¿Cuales son objetos de riesgo?","Ventanas","Bajo la mesa","Las esquinas de tu casa","Ventanas");
         this.addQuestion(q5);
 
     }

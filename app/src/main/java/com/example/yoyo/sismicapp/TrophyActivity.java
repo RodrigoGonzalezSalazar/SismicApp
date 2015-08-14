@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,15 +29,34 @@ public class TrophyActivity extends ActionBarActivity {
         String trophy2 = settings.getString("trophy2", "");
         if (trophy1.equals("si")){campeon1.setText("Sabelotodo de sismos");
             copa1.setBackgroundResource(R.drawable.trofeo);
+            copa1.setVisibility(View.VISIBLE);
             nada.setText("");
+        }
+        else {
+            copa1.setVisibility(View.GONE);
         }
 
         if (trophy2.equals("si")){campeon2.setText("Maestro en prevención");
             copa2.setBackgroundResource(R.drawable.trofeo);
+            copa2.setVisibility(View.VISIBLE);
             nada.setText("");
+            nada.setVisibility(View.GONE);
         }
-        if (trophy2.equals("no") && trophy1.equals("no")){nada.setText("No has conseguido ningun logro :(");}
+        else {
+            copa1.setVisibility(View.GONE);
+        }
+        if (trophy2.equals("no") && trophy1.equals("no")){nada.setText("No has conseguido ningun logro :(");
+            nada.setVisibility(View.VISIBLE);}
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
