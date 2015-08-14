@@ -2,6 +2,8 @@ package com.example.yoyo.sismicapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -9,11 +11,14 @@ import android.widget.TextView;
 /**
  * Created by tino on 17-11-2014.
  */
-public class ResultActivity extends Activity {
+public class ResultActivity extends ActionBarActivity {
     int trophy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.Menudesafios));
         setContentView(R.layout.activity_result);
 //get rating bar object
         RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);

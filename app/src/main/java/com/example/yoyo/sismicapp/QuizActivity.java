@@ -1,14 +1,13 @@
 package com.example.yoyo.sismicapp;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -17,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class QuizActivity extends Activity {
+public class QuizActivity extends ActionBarActivity {
 
 //    SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
   //  String trophy1 = settings.getString("trophy1", "");
@@ -33,13 +32,24 @@ public class QuizActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.Menudesafios));
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String trophy1 = settings.getString("trophy1", "");
         String trophy2 = settings.getString("trophy2", "");
-        setContentView(R.layout.activity_quiz1);
+        final String whatQuiz = settings.getString("whatQuiz","");
+        setContentView(R.layout.activity_quiz);
+        if (whatQuiz.equals("info")){
         DbHelper1 db=new DbHelper1(this);
-        quesList=db.getAllQuestions();
-        currentQ=quesList.get(qid);
+            quesList=db.getAllQuestions();
+            currentQ=quesList.get(qid);}
+        else if (whatQuiz.equals("prev")){
+            DbHelper2 db=new DbHelper2(this);
+            quesList=db.getAllQuestions();
+            currentQ=quesList.get(qid);
+        }
+
         txtQuestion=(TextView)findViewById(R.id.textView1);
         rda=(RadioButton)findViewById(R.id.radio0);
         rdb=(RadioButton)findViewById(R.id.radio1);
@@ -62,6 +72,7 @@ public class QuizActivity extends Activity {
                     currentQ=quesList.get(qid);
                     setQuestionView();
                 }else{
+                    if (whatQuiz.equals("info")){
                     Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                     Bundle b = new Bundle();
                     b.putInt("score", score); //Your score
@@ -80,7 +91,27 @@ public class QuizActivity extends Activity {
 
                     intent.putExtras(b); //Put your score to your next Intent
                     startActivity(intent);
-                    finish();
+                    finish();}
+                    else if (whatQuiz.equals("prev")){
+                        Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
+                        Bundle b = new Bundle();
+                        b.putInt("score", score); //Your score
+                        if(score == 5) {
+                            SharedPreferences.Editor edit = settings.edit();
+                            String trophy22 = "si";
+                            edit.putString("trophy2", trophy22);
+                            edit.apply();
+                        }
+                        else {
+                            SharedPreferences.Editor edit = settings.edit();
+                            String trophy22 = "no";
+                            edit.putString("trophy2", trophy22);
+                            edit.apply();
+                        }
+                        intent.putExtras(b); //Put your score to your next Intent
+                        startActivity(intent);
+                        finish();
+                    }
 
 
                 }

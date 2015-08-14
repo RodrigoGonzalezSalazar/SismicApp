@@ -3,15 +3,20 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
 
-public class TrophyActivity extends Activity {
+public class TrophyActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trophy);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.Menudesafios));
         final TextView campeon1 = (TextView) findViewById(R.id.campeon1);
         final TextView campeon2 = (TextView) findViewById(R.id.campeon2);
         final TextView nada = (TextView) findViewById(R.id.nada);

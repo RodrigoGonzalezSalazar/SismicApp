@@ -59,14 +59,6 @@
                 android:value=".MyActivity" />
         </activity>
         <activity
-            android:name=".QuizActivityy"
-            android:parentActivityName=".MyActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SuperQuizActivity" />
-        </activity>
-        <activity
             android:name=".QuizActivity"
             android:parentActivityName=".MyActivity"
             android:screenOrientation="portrait">
