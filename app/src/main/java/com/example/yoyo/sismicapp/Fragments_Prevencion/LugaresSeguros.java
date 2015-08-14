@@ -26,8 +26,14 @@ public class LugaresSeguros extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.infosismos_prevencion_gen, container, false);
         lv = (ListView) rootView.findViewById(R.id.listView);
-        completes = Arrays.asList("Extenso Situaciones de riesgo", "Extenso Forma de prevenir", "Extenso Dato Freak");
-        summary = Arrays.asList("Preview Situaciones de riesgo 2", "Preview Forma de prevenir", "Preview Dato Freak");
+        String long_info= getResources().getString(R.string.long_lugar_info);
+        String short_info= getResources().getString(R.string.short_lugar_info);
+        String long_summary= getResources().getString(R.string.long_lugar_whattodo);
+        String short_summary= getResources().getString(R.string.short_lugar_whattodo);
+        String long_dato= getResources().getString(R.string.long_lugar_dato);
+        String short_dato= getResources().getString(R.string.short_lugar_dato);
+        completes = Arrays.asList(long_info,long_summary,long_dato);
+        summary = Arrays.asList(short_info, short_summary,short_dato);
         ListAdapter_InfoAndPrev adapter = new ListAdapter_InfoAndPrev(getActivity(),"prev",completes, summary);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

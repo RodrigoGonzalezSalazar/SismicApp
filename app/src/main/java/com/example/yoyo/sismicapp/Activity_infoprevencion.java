@@ -35,16 +35,16 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
         /********************MODO TABS EN ACTIONBAR**************************/
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.setTitle("Información sobre Prevención");
+        actionBar.setTitle(getResources().getString(R.string.Menuprev));
 
         /**************************CREAR TABS******************************/
-        ActionBar.Tab tab = actionBar.newTab().setText("Como actuar en un sismo").setTabListener(this);
+        ActionBar.Tab tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_quehacersismo)).setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Lugares seguros").setTabListener(this);
+        tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_lugarseguro)).setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
+        tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_kit)).setTabListener(this);
         actionBar.addTab(tab);
 
 

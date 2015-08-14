@@ -13,7 +13,8 @@
     <string name="titulo_infosismos">Informacion sobre sismos</string>
     <string name="titulo_mercali">Escala Mercalli</string>
     <string name="titulo_quehacersismo">¿Qué hacer en caso de sismos?</string>
-    <string name="titulo_lugarseguro">Lugar seguro</string>
+    <string name="titulo_lugarseguro">Lugares seguros</string>
+    <string name="titulo_kit">Kit de emergencia</string>
 
 
     <string name="long_infosismos_info">Los sismos son perturbaciones súbitas en el interior de la tierra que dan origen a vibraciones en suelo; la causa principal y responsable de la mayoría de los sismos es la ruptura y fracturamiento de las rocas en las capas más exteriores de la tierra, dando origen una serie de ondas sísmicas que se propagan en el interior de la tierra y que al llegar a la superficie son percibidas como un temblor. El sitio donde se inicia la ruptura se llama foco (hipocentro) y el lugar en la superficie que se encuentra directamente encima en la superficie terrestre, se le denomina epicentro. "\n" "\n"
@@ -30,7 +31,7 @@ Esta es una escala que utiliza datos científicos y no percepciones de la gente.
 </string>
     <string name="short_escrit_info">La escala de Richter fue creada en 1935 por Charles Richter, sismólogo nacido en 1900.  Richter...</string>
     <string name="long_escrit_summary">La escala de Richter que mide la fuerza de los terremotos de acuerdo a su magnitud, es decir, la cantidad de energía liberada durante el sismo. Esta medición se realiza utilizando los datos que entregan los sismógrafos, aparatos encargados de registra las ondas sísmicas.</string>
-    <string name="short_escrit_summary">La escala de Richter que mide la fuerza de los terremotos de acuerdo a su magnitud, es decir...</string>
+    <string name="short_escrit_summary">La escala de Richter que mide la fuerza de los terremotos de acuerdo a su magnitud, es...</string>
     <string name="long_escrit_dato">Hasta el momento, la mayor magnitud registrada en el mundo corresponde a 9,5 grados, para el terremoto que ocurrió en Valdivia, Chile, en 1960. Si hubiera un terremoto de magnitud 10 grados, esto seria equivalente a  el choque de un meteorito rocoso de 2 km de diámetro que impacte a 25 km/s (90.000 km/h).</string>
     <string name="short_escrit_dato">Hasta el momento, la mayor magnitud registrada en el mundo corresponde a 9,5 grados, para el...</string>
 
@@ -43,4 +44,53 @@ Esta es una escala que utiliza datos científicos y no percepciones de la gente.
     <string name="short_escmerc_summary">La escala de Mercalli evalua la intensidad de los terremotos a traves de los efectos y...</string>
     <string name="long_escmerc_dato">Sabia usted que a pesar de su creación en el año 1906 por Giuseppe Mercalli, el ultimo cambio que tuvo esta escala fue hecho por Charles Richter el mismo creador de la escala de intensidad sismica.</string>
     <string name="short_escmerc_dato">Sabia usted que a pesar de su creación en el año 1906 por Giuseppe Mercalli, el ultimo cambio...</string>
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Prevencion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     <string name="long_comoactuar_info">Al ocurrir un sismo por lo general las personas no saben que hacer, el miedo hace que se nuble la mente y se tiende a cometer errores, tener agua al alcance es buena idea, pero debes tener para un periodo de al menos una semana, no una botella, colocarse detrás de una puerta tampoco es beneficioso, ya que puedes ser golpeado por la puerta mientras se balancea violentamente o ser aplastado por la gente que trata de pasar si es en un lugar publico. "\n" "\n"
+Electricidad, agua, gas y los sistemas telefonicos es altamente probable que no funcionen despues de un terremoto. La policia y los de bomberos estaran en situaciones más complicadas. "\n" "\n"
+Si estas conduciendo, mueve el auto del trafico y para. Evita parar cerca de puentes o pasos a desnivel. Trata de alejarte de postes de luz, signos y lineas de energia. Al reanudar la conduccion, atento a los peligros de la carretera (postes caidos o terrenos desnivelados) Si estas en montaña, cuidado con el deslizamiento de tierra. Del mismo modo, si estas cerca del oceano, ser consciente del peligro de tsunamis al ocurrir un gran terremoto. Subir a terrenos elevados.  Si estás en un lugar público lleno de gente, evitar entrar en pánico y no se apresure a la salida. Permanezca bajo y cúbrase la cabeza y el cuello con las manos y los brazos.
+</string>
+    <string name="short_comoactuar_info">Al ocurrir un sismo por lo general las personas no saben que hacer, el miedo hace que se nuble la...</string>
+    <string name="long_comoactuar_whattodo">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te encuentres. Una vez que el sismo termine debes dirigirte a las vías de evacuación y recuerda no usar elevadores. Además estar preparado y tomar precauciones en tu vivienda, planificando lo siguiente: "\n" "\n""\n"
+-Acordar un lugar seguro donde guarecerse y un lugar de encuentro en el caso de dispersión de tu grupo familiar durante el sismo. "\n" "\n"
+-Revisar que las instalaciones de tu vivienda tanto eléctricas como de gas, estén en buenas condiciones. "\n" "\n"
+-Preparar un kit de emergencia con elementos básicos. "\n" "\n"
+-Identificar objetos de riesgo tales como cuadros, objetos que puedan desplazarse o romperse y ventanas, manteniéndose alejados de ellos durante el sismo. "\n" "\n"
+</string>
+    <string name="short_comoactuar_whattodo">En primer lugar debes mantener la calma y protegerte en un lugar seguro dentro del lugar donde te...</string>
+    <string name="long_comoactuar_dato">El fuego puede originarse por corte del suministro eléctrico posteriormente a daños en la red de gas de grandes ciudades. Un caso destacado de este tipo de suceso es el terremoto de 1906 en San Francisco, donde los incendios causaron más víctimas que el propio sismo.</string>
+    <string name="short_comoactuar_dato">El fuego puede originarse por corte del suministro eléctrico posteriormente a daños en la...</string>
+
+    <string name="long_lugar_info">Si durante un sismo estas en un interior las zonas de seguridad corresponden a las partes más resistentes de una buena construcción, las que suelen ser las esquinas, rincones, pilares y el área que queda bajo el marco de una puerta. "\n" "\n"
+Si te encuentras en el exterior, encontrarás un lugar seguro alejándote de panderetas, edificios, cornisas, ductos de chimeneas, árboles, postes, cables eléctricos o cualquier otro peligro latente.
+</string>
+    <string name="short_lugar_info">Si durante un sismo estas en un interior las zonas de seguridad corresponden a las partes más...</string>
+    <string name="long_lugar_whattodo">Es muy importante que definas con anticipación un lugar de encuentro con tu grupo familiar en caso de un sismo, pues las comunicaciones pueden interrumpirse. Este lugar debe ser accesible para todos y seguro. "\n" "\n"
+Recordar fijar un lugar en cada habitación de la casa donde puedan colocarse en caso de un terremoto, debe ser una posición donde nada podria caerles encima. "\n" "\n"
+También pueden reducir lesiones o daños a sus pertenencias asegurándolas en el primer lugar. Asegure la parte superior muebles pesados a las paredes con correas flexibles. Utilice masilla o cierres de velcro para objetos en las mesas, estantes u otros muebles. Instale pasadores de seguridad en los gabinetes para mantenerlos cerrados.
+</string>
+    <string name="short_lugar_whattodo">Es muy importante que definas con anticipación un lugar de encuentro con tu grupo...</string>
+    <string name="long_lugar_dato">Para personas con limitaciones de movimiento, el movimiento puede incrementar la dificultad para poder moverse o mantenerse equilibrado. Trata de llegar al piso en una posicion sentada y contra una pared. Proteje tu cabeza y cuello con tus brazos y manos. "\n" "\n"
+Para personas con problemas de audición, antes de un terremoto, identifica y testea multiples formas para recibir precauciones e informacion para evacuar.</string>
+    <string name="short_lugar_dato">Para personas con limitaciones de movimiento, el movimiento puede incrementar...</string>
+
+<string name="long_kit_info">Los supermercados y la mayoria de los servicios durante un terremoto se encuentran cerrados, por lo que la posibilidad de abastecerse (comida, medicamentos, agua, etc.) sera nula por medio de estos medios. Además la electricidad, agua, gas y los sistemas telefonicos es altamente probable que no funcionen despues de un terremoto. Lo cual genera un desabastecimiento rápido de recursos básicos. Lo cual puede generar crisis en el publico y robos a tiendas y a gente inocente para obtener esto.
+</string>
+    <string name="short_kit_info">Los supermercados y la mayoria de los servicios durante un terremoto se encuentran cerrados, por lo que...</string>
+    <string name="long_kit_whattodo">Para estar preparado para un acontecimiento de este tipo, existe una lista de los siguientes elementos básicos que debes tener: "\n" "\n""\n"
+-	Linterna a pilas"\n" "\n"
+-	Radio a pilas. "\n" "\n"
+-	Pilas de repuesto. "\n" "\n"
+-	Botiquín, que cuente al menos con desinfectante, algodón, gasa, cinta adhesiva, parches curita, aspirinas. "\n" "\n"
+-	Comida energética y/o en lata para unos 5 días. "\n" "\n"
+-	Agua embotellada. "\n" "\n"
+-	Ropa de abrigo. "\n" "\n"
+-	Bolsas plásticas para guardar tu basura. "\n" "\n"
+-	Papel higiénico y/o pañuelos desechables y artículos de aseo. "\n" "\n"
+-	Dinero en efectivo (ya que las ATM no estaran en funcionamiento).</string>
+    <string name="short_kit_whattodo">Para estar preparado para un acontecimiento de este tipo, existe una lista de los...</string>
+    <string name="long_kit_dato">Como crear un extintor casero: Echar 4 cucharadas de bicarbonato sobre una servilleta y cerrarla como si se tratara de una bolsa, atándole con un poco de hilo de coser. Introducir unas 5 cucharadas de vinagre dentro de una botella plastica pequeña, colocar la pequeña bolsa dentro de la botella de manera que esta cuelgue sin tocar el vinagre, atándole con una parte del hilo hacia afuera. Colocar la tapa inmediatamente. En un lado de la botella, pegar con cinta un trozo de hilo atado a un alfiler capaz de perforar la botella. Con todo listo, al  agitar la botella y hacer un orificio en la tapa, por la cual se disparará la mezcla que apagará el fuego.</string>
+    <string name="short_kit_dato">Como crear un extintor casero: Echar 4 cucharadas de bicarbonato sobre una servilleta y cerrarla...</string>
+
+
 </resources>
