@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,26 @@ public class Fragment_miplan_home extends Fragment {
         String lugardeencuentro = settings.getString("lugarDeEncuentro", "");
         deboJuntarme = (ImageView) rootView.findViewById(R.id.debojuntarme);
         titlejuntarme = (TextView) rootView.findViewById(R.id.textView2);
+        String gastext= settings.getString("gasYo", "");
+        String luztext= settings.getString("luzYo", "");
+        String aguatext= settings.getString("aguaYo", "");
+        LinearLayout gas = (LinearLayout) rootView.findViewById(R.id.linearLayout3);
+        LinearLayout luz = (LinearLayout) rootView.findViewById(R.id.linearLayout4);
+        LinearLayout agua = (LinearLayout) rootView.findViewById(R.id.linearLayout5);
+        TextView nada = (TextView) rootView.findViewById(R.id.textView14);
+
+        if (gastext.equals("yo")||aguatext.equals("yo")||luztext.equals("yo")){
+            nada.setVisibility(View.GONE);
+        }
+        if (gastext.equals("yo")){
+            gas.setVisibility(View.VISIBLE);
+        }
+        if (aguatext.equals("yo")){
+            agua.setVisibility(View.VISIBLE);
+        }
+        if (luztext.equals("yo")){
+            luz.setVisibility(View.VISIBLE);
+        }
         if (lugardeencuentro.equals("casa")){deboJuntarme.setBackgroundResource(R.drawable.nnew_casa);
             titlejuntarme.setText("Casa");
         }
@@ -53,18 +74,7 @@ public class Fragment_miplan_home extends Fragment {
         for(String str: total) {
             if (str.equals("v")){auxtotal=auxtotal+1;}
         }
-        final ImageView deboHacer = (ImageView) rootView.findViewById(R.id.debohacer);
-
         final TextView falta = (TextView) rootView.findViewById(R.id.falta);
-
-        String checkagua = settings.getString("checkAgua", "");
-        String checkluz = settings.getString("checkLuz", "");
-        String checkgas = settings.getString("checkGas", "");
-        String tareastuyas="";
-        if (checkgas.equals("c")){tareastuyas=tareastuyas+"Cortar el gas, ";}
-        if (checkluz.equals("c")){tareastuyas=tareastuyas+"Cortar la luz, ";}
-        if (checkagua.equals("c")){tareastuyas=tareastuyas+"Cortar el agua";}
-
         falta.setText(Html.fromHtml("Aún te falta(n) <b>" + (String.valueOf(9 - auxtotal)) + "</b> item(s) por agregar a tu Kit."));
 
         return rootView;

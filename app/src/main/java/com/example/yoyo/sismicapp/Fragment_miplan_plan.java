@@ -40,7 +40,7 @@ public class Fragment_miplan_plan extends Fragment {
     List<String> list= new ArrayList();
     List<String> type= new ArrayList();
     String itemPressed="";
-
+    int j=0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.miplan_plan, container, false);
@@ -65,12 +65,16 @@ public class Fragment_miplan_plan extends Fragment {
         gastext.setText(settings.getString("gas", ""));
         aguatext.setText(settings.getString("agua", ""));
         luztext.setText(settings.getString("luz", ""));
-        List<String> items = new ArrayList<String>(Arrays.asList(familia.split(";")));
         Log.i("el log", familia);
-        for (int i = 0; i < items.size(); i++) {
-            list.add(items.get(i));
-            type.add(items.get(i + 1));
-            i = i + 1;
+        if (j==0) {
+            List<String> items = new ArrayList<String>(Arrays.asList(familia.split(";")));
+            Log.i("el log", familia);
+            for (int i = 0; i < items.size(); i++) {
+                list.add(items.get(i));
+                type.add(items.get(i + 1));
+                i = i + 1;
+            }
+            j=1;
         }
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,17 +88,44 @@ public class Fragment_miplan_plan extends Fragment {
                 if (itemPressed.equals("gas")){
                     gastext.setText("Cortar Gas"+"\n"+person);
                     edit.putString ("gas", "Cortar Gas"+"\n"+person );
+                    if (spinnerIndex==0) {
+                        edit.putString("gasYo", "yo");
+                        edit.apply();
+                    }
+                    else {
+                        edit.putString("gasYo", "no");
+                        edit.apply();
+                    }
+
                     edit.apply();
                 }
                 else if (itemPressed.equals("agua")){
                     aguatext.setText("Cortar Agua"+"\n"+person);
                     edit.putString ("agua", "Cortar Agua"+"\n"+person );
                     edit.apply();
+                    if (spinnerIndex==0) {
+                        edit.putString("aguaYo", "yo");
+                        edit.apply();
+                    }
+                    else {
+                        edit.putString("aguaYo", "no");
+                        edit.apply();
+                    }
+
                 }
                 else if (itemPressed.equals("luz")){
                     luztext.setText("Cortar Luz"+"\n"+person);
                     edit.putString ("luz","Cortar Luz"+"\n"+person );
                     edit.apply();
+                    if (spinnerIndex==0) {
+                        edit.putString("luzYo", "yo");
+                        edit.apply();
+                    }
+                    else {
+                        edit.putString("luzYo", "no");
+                        edit.apply();
+                    }
+
                 }
                 else {
                     Toast.makeText(getActivity(), "No has seleccionado un ícono de tarea", Toast.LENGTH_SHORT).show();
