@@ -38,16 +38,16 @@ public class Activity_infosismos extends ActionBarActivity implements ActionBar.
         /********************MODO TABS EN ACTIONBAR**************************/
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.setTitle("Info Sismo");
+        actionBar.setTitle(getResources().getString(R.string.Menuinfo));
 
         /**************************CREAR TABS******************************/
-        ActionBar.Tab tab = actionBar.newTab().setText("Info Sismos").setTabListener(this);
+        ActionBar.Tab tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_infosismos)).setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Escala de Mercalli").setTabListener(this);
+        tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_mercali)).setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Escala de Richter").setTabListener(this);
+        tab = actionBar.newTab().setText(getResources().getString(R.string.titulo_richter)).setTabListener(this);
         actionBar.addTab(tab);
 
 
