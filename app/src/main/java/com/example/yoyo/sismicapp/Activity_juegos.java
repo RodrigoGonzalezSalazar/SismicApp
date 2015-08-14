@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class SuperQuizActivity extends ActionBarActivity {
+public class Activity_juegos extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +50,15 @@ public class SuperQuizActivity extends ActionBarActivity {
             }
         });
 
+        Button btnanki= (Button) findViewById(R.id.button_anki);
+        btnanki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent j = new Intent(getApplicationContext(), Activity_Anki.class);
+                startActivity(j);
+
+            }
+        });
         Button btntro = (Button) findViewById(R.id.button_trophy);
         btntro.setOnClickListener(new View.OnClickListener() {
             @Override

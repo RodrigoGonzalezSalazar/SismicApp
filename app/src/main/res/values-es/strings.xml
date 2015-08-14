@@ -15,6 +15,10 @@
     <string name="titulo_quehacersismo">¿Qué hacer en caso de sismos?</string>
     <string name="titulo_lugarseguro">Lugares seguros</string>
     <string name="titulo_kit">Kit de emergencia</string>
+    <string name="anki">Diviértete aprendiendo con el mazo de flashcards de SismicApp en 3 simples pasos: "\n" "\n"
+        1. Descarga e instala la app de AnkiAndroid en tu teléfono. "\n" "\n"
+        2. Descarga nuestro mazo e Impórtalo desde la app de Anki. "\n" "\n"
+        3.¡Estas list@ para disfrutar aprendiendo con nuestras flashcards!</string>
 
 
     <string name="long_infosismos_info">Los sismos son perturbaciones súbitas en el interior de la tierra que dan origen a vibraciones en suelo; la causa principal y responsable de la mayoría de los sismos es la ruptura y fracturamiento de las rocas en las capas más exteriores de la tierra, dando origen una serie de ondas sísmicas que se propagan en el interior de la tierra y que al llegar a la superficie son percibidas como un temblor. El sitio donde se inicia la ruptura se llama foco (hipocentro) y el lugar en la superficie que se encuentra directamente encima en la superficie terrestre, se le denomina epicentro. "\n" "\n"

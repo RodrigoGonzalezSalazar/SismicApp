@@ -26,6 +26,14 @@
                 android:value=".MyActivity" />
         </activity>
         <activity
+            android:name=".Activity_Anki"
+            android:parentActivityName=".MyActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyActivity" />
+        </activity>
+        <activity
             android:name=".Activity_infosismos"
             android:parentActivityName=".MyActivity"
             android:screenOrientation="portrait">
@@ -51,7 +59,7 @@
                 android:value=".MyActivity" />
         </activity>
         <activity
-            android:name=".SuperQuizActivity"
+            android:name=".Activity_juegos"
             android:parentActivityName=".MyActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -64,7 +72,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SuperQuizActivity" />
+                android:value=".Activity_juegos" />
         </activity>
         <activity
             android:name=".TrophyActivity"
@@ -72,7 +80,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SuperQuizActivity"/>
+                android:value=".Activity_juegos"/>
         </activity>
         <activity
             android:name=".Activity_miplan_family_create"

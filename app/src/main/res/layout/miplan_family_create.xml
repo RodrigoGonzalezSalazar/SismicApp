@@ -83,7 +83,7 @@
         android:id="@+id/button"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:background="#31B404"
+        android:background="@drawable/anki"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceMedium"

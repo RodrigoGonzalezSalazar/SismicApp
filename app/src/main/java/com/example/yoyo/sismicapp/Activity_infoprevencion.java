@@ -48,7 +48,7 @@ public class Activity_infoprevencion extends ActionBarActivity implements Action
         actionBar.addTab(tab);
 
 
-    }
+}
     public class PagerAdapter extends FragmentPagerAdapter {
 
         public PagerAdapter(FragmentManager fm) {

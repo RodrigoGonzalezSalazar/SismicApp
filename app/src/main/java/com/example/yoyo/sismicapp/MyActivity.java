@@ -50,7 +50,7 @@ public class MyActivity extends ActionBarActivity {
         btnquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent q = new Intent(getApplicationContext(), SuperQuizActivity.class);
+                Intent q = new Intent(getApplicationContext(), Activity_juegos.class);
                 startActivity(q);
 
             }

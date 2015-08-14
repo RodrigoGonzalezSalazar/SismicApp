@@ -1,7 +1,6 @@
 package com.example.yoyo.sismicapp.ListAdapters;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,7 +16,6 @@ import android.widget.TextView;
 
 import com.example.yoyo.sismicapp.Activity_miplan;
 import com.example.yoyo.sismicapp.R;
-import com.example.yoyo.sismicapp.SuperQuizActivity;
 
 import java.util.List;
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:gravity="center_horizontal">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView16"
+                android:background="@drawable/anki"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView20"
+                android:text="@string/anki"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView22"
+                android:text="https://play.google.com/store/apps/details?id=com.ichi2.anki&amp;hl=es_419&amp;referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Danki%20droid&amp;pcampaignid=APPU_1_ZGXNVf3VIIGMwgS-vKGABg"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:focusable="false"
+                android:textColor="#2E64FE"
+                android:layout_marginBottom="8dp"
+                android:autoLink="all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView23"
+                android:text="https://www.dropbox.com/s/9250jecuxgjztm4/SismicApp.apkg?dl=0"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:focusable="false"
+                android:textColor="#2E64FE"
+                android:autoLink="all" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
