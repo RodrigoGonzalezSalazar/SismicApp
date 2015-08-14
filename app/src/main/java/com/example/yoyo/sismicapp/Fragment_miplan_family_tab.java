@@ -48,6 +48,12 @@ public class Fragment_miplan_family_tab extends Fragment {
         ListAdapter_familytab adapter = new ListAdapter_familytab(getActivity(), list, type);
         lv.setAdapter(adapter);
         ImageButton delete = (ImageButton) rootView.findViewById(R.id.delete);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapter, View view, int position,
+                                    long arg3) {
+                Log.i("tag", String.valueOf(position));
+            }
+        });
         Button agregar = (Button) rootView.findViewById(R.id.but);
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,16 +65,5 @@ public class Fragment_miplan_family_tab extends Fragment {
         });
 
         return rootView;
-    }
-    public View getViewByPosition(int pos, ListView listView) {
-        final int firstListItemPosition = listView.getFirstVisiblePosition();
-        final int lastListItemPosition = firstListItemPosition + listView.getChildCount() - 1;
-
-        if (pos < firstListItemPosition || pos > lastListItemPosition ) {
-            return listView.getAdapter().getView(pos, null, listView);
-        } else {
-            final int childIndex = pos - firstListItemPosition;
-            return listView.getChildAt(childIndex);
-        }
     }
 }

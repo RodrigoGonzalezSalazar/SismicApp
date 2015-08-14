@@ -19,8 +19,8 @@ public class MyActivity extends ActionBarActivity {
         if (!aux.equals("Yo")){
             edit.putString ("familia", "Rodrigo (Yo);hijo" );
             edit.putString ("gas", "Cortar Gas" );
-            edit.putString ("luz", "Cortar Agua" );
-            edit.putString ("agua", "Cortar Luz" );
+            edit.putString ("luz", "Cortar Luz" );
+            edit.putString ("agua", "Cortar Agua" );
             edit.putString ("NombreUsuario", "Yo" );
             edit.apply();}
 

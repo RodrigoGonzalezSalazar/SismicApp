@@ -39,11 +39,10 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
         tab = actionBar.newTab().setText("Grupo Familiar").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Prepara tu plan").setTabListener(this);
+        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
         actionBar.addTab(tab);
 
-
-        tab = actionBar.newTab().setText("Kit de emergencia").setTabListener(this);
+        tab = actionBar.newTab().setText("Prepara tu plan").setTabListener(this);
         actionBar.addTab(tab);
     }
     public class PagerAdapter extends FragmentPagerAdapter {
@@ -59,9 +58,10 @@ public class Activity_miplan extends ActionBarActivity implements ActionBar.TabL
                 case 1:
                     return new Fragment_miplan_family_tab();
                 case 2:
-                    return new Fragment_miplan_plan();
-                case 3:
                     return new Fragment_miplan_Prepararmikit();
+                case 3:
+                    return new Fragment_miplan_plan();
+
                 default:
                     return null;
             }
